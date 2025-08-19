@@ -1,5 +1,7 @@
 # Chandresh Kumari - Interactive Resume
 
+[![github pages](https://github.com/kalkinso-team/resume-sample/actions/workflows/run-gh-pages.yml/badge.svg?branch=main&event=deployment)](https://github.com/kalkinso-team/resume-sample/actions/workflows/run-gh-pages.yml)
+
 A visually engaging, interactive web resume built with React, Vite, Chakra UI, and Framer Motion. Easily deployable and production-ready, designed to impress recruiters at top tech companies.
 
 ---
