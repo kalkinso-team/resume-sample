@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>404 - Not Found</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+        background: #f7fafc;
+        color: #2d3748;
+      }
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5em;
+      }
+      p {
+        font-size: 1.25rem;
+      }
+      a {
+        color: #3182ce;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>404</h1>
+    <p>Page not found.</p>
+    <p>
+      <a href="/">Go to Home</a>
+    </p>
+    <script>
+      // Redirect all 404s to index.html for SPA routing
+      if (location.pathname !== '/index.html') {
+        location.replace('/chandresh-resume' + '/index.html' + location.search + location.hash);
+      }
+    </script>
+  </body>
+</html>

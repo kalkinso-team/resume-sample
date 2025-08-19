@@ -10,7 +10,7 @@ A visually engaging, interactive web resume built with React, Vite, Chakra UI, a
 - Modular React components
 - All resume links are accessible and interactive
 - Dark mode support
-- Easy deployment with Docker
+- Easy deployment with Docker or GitHub Pages
 
 ---
 
@@ -67,6 +67,32 @@ docker-compose down
 
 ---
 
+## 🚀 Deploying to GitHub Pages
+
+This project supports deployment to GitHub Pages using GitHub Actions.
+
+### Prerequisites
+
+- Repository must be public on GitHub.
+- Replace `your-username` in `package.json`'s `homepage` field with your actual GitHub username.
+
+### Steps
+
+1. **Push your code to the `master` branch.**
+2. **GitHub Actions will automatically build and deploy your site to the `gh-pages` branch.**
+3. **Your site will be available at:**
+   ```
+   https://your-username.github.io/chandresh-resume
+   ```
+
+### Notes
+
+- The workflow uses Node.js v20 and npm.
+- The Vite build output (`dist/`) is published to GitHub Pages.
+- SPA routing is supported via `404.html` redirect.
+
+---
+
 ## 📦 Production Build
 
 To build the app for production (without Docker):
@@ -86,6 +112,7 @@ The static files will be output to the `dist/` directory.
 - `Dockerfile` - Docker build instructions
 - `docker-compose.yml` - Docker Compose setup
 - `nginx.conf` - Nginx configuration for SPA routing
+- `.github/workflows/gh-pages.yml` - GitHub Actions workflow for Pages deployment
 
 ---
 
