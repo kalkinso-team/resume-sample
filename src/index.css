@@ -1,0 +1,135 @@
+:root {
+  --primary: #2563eb;
+  --secondary: #fbbf24;
+  --bg: #f8fafc;
+  --text: #1e293b;
+  --accent: #10b981;
+  --card: #fff;
+  --shadow: 0 4px 24px rgba(30,41,59,0.08);
+  --radius: 18px;
+  --font-main: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+section {
+  margin: 0 auto 48px auto;
+  max-width: 900px;
+  padding: 32px 20px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.3em;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-bar-bg {
+  background: #e5e7eb;
+  border-radius: 8px;
+  height: 16px;
+  width: 100%;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transition: width 1s cubic-bezier(.4,0,.2,1);
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  margin-bottom: 24px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 32px rgba(37,99,235,0.12);
+}
+
+.timeline {
+  border-left: 3px solid var(--primary);
+  margin-left: 16px;
+  padding-left: 24px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -32px;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  background: var(--primary);
+  border-radius: 50%;
+  border: 3px solid var(--bg);
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 16px 4px;
+    max-width: 100vw;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+}
